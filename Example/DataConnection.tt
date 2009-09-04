@@ -1,0 +1,15 @@
+﻿<# var section = new Section
+	{
+		Namespace = "Community.Example",
+		Name = "DataConnectionConfiguration",
+		Path = "community/data",
+		Properties = 
+		{
+			new Property{Name = "Server"},
+			new Property{Name = "Database"},
+			new Property{Name = "Username"},
+			new Property{Name = "Timeout", Type = "int"}
+		}
+	};
+#>
+<#@ include file="..\ConfigLanguage\ConfigurationSection.tt" #>
