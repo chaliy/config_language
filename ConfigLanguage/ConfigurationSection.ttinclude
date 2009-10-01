@@ -1,4 +1,4 @@
-﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly Name="System.Core.dll" #>
 <#@ import namespace = "System.Collections.Generic" #>
 <#@ output extension=".cs" #>
@@ -56,6 +56,7 @@ namespace <#= section.Namespace #>
 	}
 }
 <#+
+// DSL
 public class Section{
 	public string Namespace {get;set;}
 	public string Name {get;set;}
@@ -64,13 +65,15 @@ public class Section{
 }
 public class Property{
 	public Property(){
-		Type = "string";
+		Type = "string";		
 	}
 	public string Name {get;set;}
 	public string Type {get;set;}
 }
+
 #>
 <#+
+// Helper methods
 private static string CamelCase(string input)
 {
 	if (input != null && input.Length > 1)

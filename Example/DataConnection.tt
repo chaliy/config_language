@@ -1,4 +1,5 @@
-﻿<# var section = new Section
+<# var section = 
+	new Section
 	{
 		Namespace = "Community.Example",
 		Name = "DataConnectionConfiguration",
@@ -8,8 +9,8 @@
 			new Property{Name = "Server"},
 			new Property{Name = "Database"},
 			new Property{Name = "Username"},
-			new Property{Name = "Timeout", Type = "int"}
+			new Property{Name = "Timeout", Type = "int"}			
 		}
 	};
 #>
-<#@ include file="..\ConfigLanguage\ConfigurationSection.tt" #>
+<#@ include file="..\ConfigLanguage\ConfigurationSection.ttinclude" #>

@@ -1,4 +1,4 @@
-﻿namespace Community.Example
+namespace Community.Example
 {
 	using System.Configuration;
 	using System.Diagnostics.Contracts;

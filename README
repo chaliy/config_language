@@ -1,0 +1,22 @@
+Code & example for [Code-generation DLS with T4 (Text Templates)]<http://chaliy.name/blog/2009/10/code_generation_dsl_with_t4_text_templates>.
+
+T4 (Text Template) for generating .NET Configuration Sections. Provides small and easy DSL and actual template. Usage is very easy. Create T4 template. Add ConfigurationSection.ttinclude as include. And define data.
+
+	<# var section = 
+		new Section
+		{
+			Namespace = "Community.Example",
+			Name = "DataConnectionConfiguration",
+			Path = "community/data",
+			Properties = 
+			{
+				new Property{Name = "Server"},
+				new Property{Name = "Database"},
+				new Property{Name = "Username"},
+				new Property{Name = "Timeout", Type = "int"}			
+			}
+		};
+	#>
+	<#@ include file="..\ConfigLanguage\ConfigurationSection.ttinclude" #>
+
+For the full example refer to the Example project.
